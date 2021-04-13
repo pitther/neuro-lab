@@ -1,0 +1,8 @@
+{
+  "name": "lab1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "de3f1666"
+}
