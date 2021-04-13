@@ -22,7 +22,18 @@ const Tab2: React.FC = () => {
     const [textRes, setTextRes] = useState<string>();
 
     const [dataDots, setDataDots] = useState<any>([
-        {fill:'white',x:0,y:0},
+        {fill:'grey',x:0,y:-1},
+        {fill:'grey',x:0,y:-2},
+        {fill:'grey',x:0,y:-3},
+        {fill:'grey',x:0,y:-4},
+        {fill:'grey',x:0,y:-5},
+        {fill:'grey',x:0,y:0},
+        {fill:'grey',x:0,y:1},
+        {fill:'grey',x:0,y:2},
+        {fill:'grey',x:0,y:3},
+        {fill:'grey',x:0,y:4},
+        {fill:'grey',x:0,y:5},
+
         {fill:'#ff6961',x:-1,y:1},
         {fill:'#ff6961',x:-2,y:2},
         {fill:'#ff6961',x:-3,y:3},
@@ -65,7 +76,7 @@ const Tab2: React.FC = () => {
             newDot = ({fill:'#82ca9d',label:"Точка №"+dataDots.length,x:numbers.a, y:numbers.b, z:z.toFixed(4)})
             setTextRes(`Точка №${dataDots.length} (${numbers.a}, ${numbers.b}) відноситься до 2 класу`);
         } else {
-            newDot = ({fill:'white',label:"Точка №"+dataDots.length,x:numbers.a, y:numbers.b, z:z.toFixed(4)})
+            newDot = ({fill:'grey',label:"Точка №"+dataDots.length,x:numbers.a, y:numbers.b, z:z.toFixed(4)})
             setTextRes(`Точка №${dataDots.length} (${numbers.a}, ${numbers.b}) не відноситься до жодного з класів`);
         }
 
@@ -172,7 +183,7 @@ const Tab2: React.FC = () => {
                                                         <Legend/>
                                                         <Scatter name="1 клас" data={dataDots} fill={"#ff6961"} />
                                                         <Scatter name="2 клас" data={dataDots} fill={"#82ca9d"} />
-                                                        <Scatter name="Без класу" data={dataDots} fill={"white"} />
+                                                        <Scatter name="Без класу" data={dataDots} fill={"grey"} />
                                                     </ScatterChart>
                                                 </ResponsiveContainer>
                                             </IonCol>
